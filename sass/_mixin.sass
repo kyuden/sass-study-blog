@@ -1,0 +1,16 @@
+=grids
+  width: 100%
+  max-width: $grids-max-width
+  margin:
+    left:  auto
+    right: auto
+  +clearfix
+
+=column($columns)
+  float: left
+  margin:
+    left: $grid-margin * 1%
+  width:  columns-width($columns) * 1%
+  &:first-child
+    margin:
+      left: 0

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+  <title>kyuden blog</title>
+  <link href='stylesheets/style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header role='banner'>
+    <div class='grids'>
+      <div class='column4 brands'>
+        <a href='#'>
+          <img align='middle' height='36' src='images/logo.png' width='36'>
+          Kyuden Blog
+        </a>
+      </div>
+      <div class='column8 menu'>
+        <nav role='navigation'>
+          <ul>
+            <li>
+              <a href='#'>Who I Am</a>
+            </li>
+            <li>
+              <a href='#'>Life log</a>
+            </li>
+            <li>
+              <a href='#'>Contact Me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div id='container'>
+    <div class='grids'>
+      <div class='column8 post'>
+        <a href='#'>
+          <h1 class='title'>
+            Automatic Sass Imports with Sass Globbing
+          </h1>
+        </a>
+        <div class='info'>
+          <div class='publish'>
+            <span class='label'>
+              Published
+            </span>
+            <span class='day'>
+              May 31st, 2013
+            </span>
+          </div>
+          <div class='tag'>
+            <span class='label'>
+              Taged in
+            </span>
+            <span class='tag-name'>
+              <a href='#'>
+                Tutorials,
+              </a>
+              <a href='#'>
+                Development,
+              </a>
+              <a href='#'>
+                Sass
+              </a>
+            </span>
+          </div>
+        </div>
+        <p>
+          If you're using
+          <a href='http://sass-lang.com/'>Sass to preprocess your stylesheets, you've probably discovered.</a>
+        </p>
+        <aside>
+          Note: this article assumes you're familiar with Sass and the Compass framework. If you're new, I highly recommend the tutorials over at
+          <a href='http://thesassway.com/beginner' rel='external'>The Sass Way</a>
+        </aside>
+        <h3>
+          A Partial Introduction
+        </h3>
+        <p>
+          Creating a partial is really easy. It's just a regular Sass file with a leading underscore:
+        </p>
+        <p>
+          Notice that I don't write the leading underscore when importing the partial. Also, it's best to leave off the file extension: it's simpler to write, and if I wanted to switch to using Sass's indented syntax, I wouldn't have to change my import statement.
+        </p>
+        <p>
+          Now I have the freedom to organize my stylesheet source code any way I want and still deliver a single file to keep HTTP requests down. Or, I could even output several customized stylesheets from a common codebase.
+        </p>
+        <h3>
+          Partials in Practice
+        </h3>
+        <p>
+          So the general idea of organizing code is nice, but let's look at some real-world benefits by looking through the lens of some recent developments in the CSS world that aren't about preprocessors at all.
+        </p>
+        <p>
+          CSS is going modular. As sites and apps get more complex, writing a single giant stylesheet only encourages me to chuck new rules at the bottom and not really think about the big pictire. This is especially true if the existing code is already hard to understand, poorly organized, and full of repetitive styles targeting specific elements on specific pages.
+        </p>
+        <h3>
+          Import Order Blues
+        </h3>
+        <p>
+          There is one wrinkle. Say I'm developing mobile-first, and I've finished roughing in my
+        </p>
+        <p>
+          The simplest solution is simply to number the files. We'll change the layout files to:
+        </p>
+        <p>
+          As a bonus, we can see the load order of our files right in the file browser. Neat and tidy. The best part is, our stylesheets just re-compiled correctly, and we never touched
+        </p>
+        <h3>
+          Done and done
+        </h3>
+        <p>
+          So now we can have our cake and eat it too. We have a practical, maintainable project structure for our stylesheets, and we've cut out a whole bunch of configuration that would otherwise be a downside. Happy globbing!
+        </p>
+      </div>
+      <div class='column4 sidebar'>
+        <aside class='grids'>
+          <div class='column5' id='profile'>
+            <a href='#'>
+              <img alt='' height='130' src='images/face.jpg' width='130'>
+            </a>
+          </div>
+          <div class='column7' id='introduce'>
+            <a class='username' href='#'>
+              Kyuden Masahiro
+            </a>
+            <div class='detail'>
+              <p>
+                Web Developer.
+              </p>
+              <p>
+                Creating
+                <a href='https://weekjp.com'>
+                  Weekjp.com
+                </a>
+              </p>
+              <ul class='social-icon'>
+                <li>
+                  <a class='social-icon-github spin' href='https://github.com/Kyuden'></a>
+                </li>
+                <li>
+                  <a class='social-icon-twitter spin' href='https://twitter.com/Kyuden_'></a>
+                </li>
+                <li>
+                  <a class='social-icon-facebook spin' href='https://www.facebook.com/masahiro.hisada.7'></a>
+                </li>
+                <li>
+                  <a class='social-icon-youtube spin' href='#'></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <aside id='tags'>
+          <span class='title'>
+            Tags
+          </span>
+          <ul>
+            <li>
+              <a href='#'>
+                Ruby
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                Rails
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                Sass
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                Compass
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                other
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                Ruby
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                Rails
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                Sass
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                Compass
+              </a>
+            </li>
+            <li>
+              <a href='#'>
+                other
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+  <footer>
+    Copyright Kyuden 2014 All Rights Reserved.
+  </footer>
+</body>

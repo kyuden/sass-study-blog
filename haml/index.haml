@@ -1,0 +1,137 @@
+!!!
+%head
+  %title kyuden blog
+  %link(rel="stylesheet" type="text/css" href="stylesheets/style.css")
+%body
+  %header{role: "banner"}
+    .grids
+      .column4.brands
+        %a{href: "#"}
+          %img{src: "images/logo.png", width: 36, height: 36, align: "middle"}
+          Kyuden Blog
+      .column8.menu
+        %nav{role: "navigation"}
+          %ul
+            %li
+              %a{href: "#"} Who I Am
+            %li
+              %a{href: "#"} Life log
+            %li
+              %a{href: "#"} Contact Me
+  #container
+    .grids
+      .column8.post
+        %a{href: "#"}
+          %h1.title
+            Automatic Sass Imports with Sass Globbing
+        .info
+          .publish
+            %span.label
+              Published
+            %span.day
+              May 31st, 2013
+          .tag
+            %span.label
+              Taged in
+            %span.tag-name
+              %a{href: "#"}
+                Tutorials,
+              %a{href: "#"}
+                Development,
+              %a{href: "#"}
+                Sass
+        %p
+          If you're using
+          %a{href: "http://sass-lang.com/"} Sass to preprocess your stylesheets, you've probably discovered.
+        %aside
+          Note: this article assumes you're familiar with Sass and the Compass framework. If you're new, I highly recommend the tutorials over at
+          %a{href: "http://thesassway.com/beginner", rel: "external"} The Sass Way
+        %h3
+          A Partial Introduction
+        %p
+          Creating a partial is really easy. It's just a regular Sass file with a leading underscore:
+        %p
+          Notice that I don't write the leading underscore when importing the partial. Also, it's best to leave off the file extension: it's simpler to write, and if I wanted to switch to using Sass's indented syntax, I wouldn't have to change my import statement.
+
+
+        %p
+          Now I have the freedom to organize my stylesheet source code any way I want and still deliver a single file to keep HTTP requests down. Or, I could even output several customized stylesheets from a common codebase.
+        %h3
+          Partials in Practice
+        %p
+          So the general idea of organizing code is nice, but let's look at some real-world benefits by looking through the lens of some recent developments in the CSS world that aren't about preprocessors at all.
+        %p
+          CSS is going modular. As sites and apps get more complex, writing a single giant stylesheet only encourages me to chuck new rules at the bottom and not really think about the big pictire. This is especially true if the existing code is already hard to understand, poorly organized, and full of repetitive styles targeting specific elements on specific pages.
+        %h3
+          Import Order Blues
+        %p
+          There is one wrinkle. Say I'm developing mobile-first, and I've finished roughing in my
+        %p
+          The simplest solution is simply to number the files. We'll change the layout files to:
+        %p
+          As a bonus, we can see the load order of our files right in the file browser. Neat and tidy. The best part is, our stylesheets just re-compiled correctly, and we never touched
+        %h3
+          Done and done
+        %p
+          So now we can have our cake and eat it too. We have a practical, maintainable project structure for our stylesheets, and we've cut out a whole bunch of configuration that would otherwise be a downside. Happy globbing!
+      .column4.sidebar
+        %aside.grids
+          .column5#profile
+            %a{href: "#"}
+              %img{alt: "", height: "130", src: "images/face.jpg", width: "130"}
+          .column7#introduce
+            %a.username{href: "#"}
+              Kyuden Masahiro
+            .detail
+              %p
+                Web Developer.
+              %p
+                Creating
+                %a{href: "https://weekjp.com"}
+                  Weekjp.com
+              %ul.social-icon
+                %li
+                  %a.social-icon-github.spin{href: "https://github.com/Kyuden"}
+                %li
+                  %a.social-icon-twitter.spin{href: "https://twitter.com/Kyuden_"}
+                %li
+                  %a.social-icon-facebook.spin{href: "https://www.facebook.com/masahiro.hisada.7"}
+                %li
+                  %a.social-icon-youtube.spin{href: "#"}
+        %aside#tags
+          %span.title
+            Tags
+          %ul
+            %li
+              %a{href: "#"}
+                Ruby
+            %li
+              %a{href: "#"}
+                Rails
+            %li
+              %a{href: "#"}
+                Sass
+            %li
+              %a{href: "#"}
+                Compass
+            %li
+              %a{href: "#"}
+                other
+            %li
+              %a{href: "#"}
+                Ruby
+            %li
+              %a{href: "#"}
+                Rails
+            %li
+              %a{href: "#"}
+                Sass
+            %li
+              %a{href: "#"}
+                Compass
+            %li
+              %a{href: "#"}
+                other
+  %footer
+    Copyright Kyuden 2014 All Rights Reserved.
+

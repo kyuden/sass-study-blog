@@ -1,0 +1,28 @@
+body
+  font-family: "Helvetica Neue", "Helvetica"
+  color:       $text-color
+  font-size:   $font-size-base
+  line-height: $base-line-height
+
+%headBase
+  font-weight: bold
+  line-height: $headings-line-height
+
+@for $num from 1 through 5
+  h#{$num}
+    @extend    %headBase
+    font-size: get-head-fontsize($num)
+
+h3
+  margin:    $heading-margin
+
+a
+  color: $link-color
+  text-decoration: none
+  &:hover
+    color: $link-hover-color
+
+#container
+  margin: $container-margin
+
+

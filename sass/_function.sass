@@ -1,0 +1,29 @@
+@function grids-margin-sum()
+  @return $grid-margin * ($grids-count - 1)
+
+@function grids-width-sum()
+  @return 100 - grids-margin-sum()
+
+@function grid-width()
+  @return grids-width-sum() / $grids-count
+
+@function columns-grid-width($columns)
+  @return grid-width() * $columns
+
+@function columns-margin-width($columns)
+  @return $grid-margin * ($columns - 1)
+
+@function columns-width($columns)
+  @return columns-grid-width($columns) + columns-margin-width($columns)
+
+@function get-head-fontsize($num)
+  @if $num == 1
+    @return $font-size-h1
+  @else if $num == 2
+    @return $font-size-h2
+  @else if $num == 3
+    @return $font-size-h3
+  @else if $num == 4
+    @return $font-size-h4
+  @else if $num == 5
+    @return $font-size-h5

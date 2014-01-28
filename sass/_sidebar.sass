@@ -1,0 +1,47 @@
+#profile
+  img
+    @include border-radius(40%)
+    vertical-align: middle
+
+#introduce
+  margin-top: 30px
+
+  .username
+    font-size: $name-font-size
+
+  .detail
+    margin-top: 5px
+    line-height: 20px
+
+  .social-icon
+    margin-top: 10px
+
+    li
+      display: inline-block
+      a
+        display: inline-block
+
+
+#tags
+  margin-top: 70px
+  .title
+    display: inline-block
+    font-weight: bold
+    font-size: $font-size-h2
+    margin-bottom: 20px
+  ul
+    li
+      margin:  $tags-margin
+      padding: $tags-padding
+      background-color: $gray-darker
+      display: inline-block
+      @include border-radius(20%)
+      &:last-child
+        margin-right: 0
+      &:hover
+        background-color: $gray-light
+        a
+          text-shadow: $gray-dark 0px 0px 10px
+          color: $gray-lighter
+      a
+        color: $link-color
